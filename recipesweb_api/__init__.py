@@ -6,6 +6,7 @@ import os
 
 app = Flask(__name__)
 
+load_dotenv()
 
 # Select environment based on the ENV environment variable
 if os.getenv('ENV') == 'dev':
