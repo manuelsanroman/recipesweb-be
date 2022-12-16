@@ -4,7 +4,7 @@ import os
 load_dotenv()
 
 class Config(object):
-    SECRET_KEY = 'Secret-key-msanroman'
+    SECRET_KEY = 'not-needed'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):

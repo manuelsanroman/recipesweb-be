@@ -21,7 +21,7 @@ jobs:
       
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.9
+    - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
@@ -53,7 +53,7 @@ jobs:
       ENV: prod
       DBUSER: postgres@jseijas-dbsrv.postgres.database.azure.com
       DBPASS: Pa$$w0rd1990
-      DBHOST: jseijas-dbsrv
+      DBHOST: jseijas-dbsrv.postgres.database.azure.com
       DBNAME: msanroman-assignment-prod-db
     environment:
       name: 'Production'
@@ -84,7 +84,7 @@ jobs:
       ENV: dev
       DBUSER: postgres@jseijas-dbsrv.postgres.database.azure.com
       DBPASS: Pa$$w0rd1990
-      DBHOST: jseijas-dbsrv
+      DBHOST: jseijas-dbsrv.postgres.database.azure.com
       DBNAME: msanroman-assignment-dev-db
     environment:
       name: 'Development'
