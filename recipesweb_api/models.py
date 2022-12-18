@@ -3,8 +3,8 @@ from recipesweb_api import db
 class Recipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(32), nullable=False)
-    ingredients = db.Column(db.String(500), nullable=False)
-    steps = db.Column(db.String(500), nullable=False)
+    ingredients = db.Column(db.String(100), nullable=False)
+    steps = db.Column(db.String(100), nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     favorite = db.Column(db.Boolean, nullable=False)
 
@@ -18,5 +18,5 @@ class Recipe(db.Model):
         if rating >= 1 and rating <= 5:
             self.rating = rating
         else:
-            self.rating = 0
+            self.rating = 1
         self.favorite = favorite
